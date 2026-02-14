@@ -1,0 +1,20 @@
+# promptfooconfig.yaml
+description: "LLM PR-review best-practices research (panel run)"
+dotenv: .env
+
+providers:
+  - id: openrouter:openai/gpt-5.2-pro
+  - id: openrouter:anthropic/claude-opus-4.6
+  - id: openrouter:google/gemini-3-pro-preview
+  - id: openrouter:mistralai/mistral-large-2512
+  - id: openrouter:meta-llama/llama-4-maverick
+
+prompts:
+  - file://prompts/research.prompt.md
+
+tests:
+  - description: "best-practices prompt (single case)"
+    vars: {}
+    assert:
+      - type: contains
+        value: "review.agent.md"

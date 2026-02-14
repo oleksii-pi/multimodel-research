@@ -1,0 +1,655 @@
+{
+  "evalId": "eval-e4k-2026-02-14T19:48:18",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-02-14T19:48:18.601Z",
+    "prompts": [
+      {
+        "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+        "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+        "id": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "provider": "openrouter:openai/gpt-5.2-pro",
+        "metrics": {
+          "score": 1,
+          "testPassCount": 1,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 1,
+          "assertFailCount": 0,
+          "totalLatencyMs": 13,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 2783,
+            "total": 2783,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+        "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+        "id": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "provider": "openrouter:anthropic/claude-opus-4.6",
+        "metrics": {
+          "score": 1,
+          "testPassCount": 1,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 1,
+          "assertFailCount": 0,
+          "totalLatencyMs": 15,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 1417,
+            "total": 1417,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+        "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+        "id": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "provider": "openrouter:google/gemini-3-pro-preview",
+        "metrics": {
+          "score": 0,
+          "testPassCount": 0,
+          "testFailCount": 1,
+          "testErrorCount": 0,
+          "assertPassCount": 0,
+          "assertFailCount": 1,
+          "totalLatencyMs": 16,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 1383,
+            "total": 1383,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+        "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+        "id": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "provider": "openrouter:mistralai/mistral-large-2512",
+        "metrics": {
+          "score": 1,
+          "testPassCount": 1,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 1,
+          "assertFailCount": 0,
+          "totalLatencyMs": 18,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 1383,
+            "total": 1383,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      },
+      {
+        "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+        "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+        "id": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "provider": "openrouter:meta-llama/llama-4-maverick",
+        "metrics": {
+          "score": 1,
+          "testPassCount": 1,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 1,
+          "assertFailCount": 0,
+          "totalLatencyMs": 2,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 785,
+            "total": 785,
+            "numRequests": 1,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "error": "Expected output to contain \"review.agent.md\"",
+        "gradingResult": {
+          "pass": false,
+          "score": 0,
+          "reason": "Expected output to contain \"review.agent.md\"",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": false,
+              "score": 0,
+              "reason": "Expected output to contain \"review.agent.md\"",
+              "assertion": {
+                "type": "contains",
+                "value": "review.agent.md"
+              }
+            }
+          ]
+        },
+        "id": "52d78d76-dbab-4298-812d-d54df5c0e9e8",
+        "latencyMs": 16,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+          "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+          "config": {}
+        },
+        "promptId": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "promptIdx": 2,
+        "provider": {
+          "id": "openrouter:google/gemini-3-pro-preview",
+          "label": ""
+        },
+        "response": {
+          "output": "Thinking: **Evaluating Automation Potential**\n\n\\n\\n\n\nI'm focused on the request, specifically the role of a Solutions Architect, aiming for best practices in automating the review process using LLMs and GenAI. The initial analysis of the context is underway, considering the team's needs and the specifics of the review process. I'm moving on to outlining potential approaches now.\n\n\n**Designing AI-Assisted Review**\n\n\\n\\n\n\nI've moved on to deconstructing the problems, focusing on the pain points and brainstorming solutions. Currently, I'm working through each issue, from large MRs to the lack of test-driven development, and outlining how an AI agent could mitigate them. My goal is to craft prompts that will address each problem directly, ensuring that the AI provides relevant summaries and flags potential issues.\n\n\n**Formulating the Core Prompt**\n\n\\n\\n\n\nMy current focus is on distilling the solutions into a single, cohesive prompt for the AI agent. I am determining the best way to structure the prompt to cover all identified problems and desires. I'm prioritizing clarity and efficiency, ensuring the prompt provides actionable advice while remaining under the size constraint. I am also working on the specific instructions the AI will need to be effective.\n\n\n**Structuring the AI Instructions**\n\n\\n\\n\n\nNow, I'm working on the detailed prompt instructions. I'm incorporating the analysis into the rules, defining specific actions for the AI, such as identifying large PRs and scrutinizing test quality. I'm focusing on ensuring it suggests alternatives to excessive mocking and assesses the application of end-to-end tests. The goal is to make the prompt actionable and produce consistent, high-quality reviews.\n\n\n\n\nHere are the architectural best practices for automating your review process, followed by the requested prompt file.\n\n### Architectural Strategy: The \"AI-Augmented Gatekeeper\"\n\nGiven your specific context (",
+          "tokenUsage": {
+            "cached": 1383,
+            "total": 1383
+          },
+          "cached": true,
+          "finishReason": "length"
+        },
+        "score": 0,
+        "success": false,
+        "testCase": {
+          "description": "best-practices prompt (single case)",
+          "vars": {},
+          "assert": [
+            {
+              "type": "contains",
+              "value": "review.agent.md"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 1
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "review.agent.md"
+              }
+            }
+          ]
+        },
+        "id": "c2cff224-6838-4542-9c78-7e7b5e7894a3",
+        "latencyMs": 13,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+          "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+          "config": {}
+        },
+        "promptId": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "promptIdx": 0,
+        "provider": {
+          "id": "openrouter:openai/gpt-5.2-pro",
+          "label": ""
+        },
+        "response": {
+          "output": "Thinking: **Evaluating testing strategies**\n\nI need to think about using specific policies like MR size threshold, and ensure I require a summary along with a test plan. For tasks like summarization, risk analysis, and checklist completion, I'll utilize LLMs effectively, but I also need human review for things like evaluating mocks. Ideally, I’d prefer contract, component, and integration tests, using tools like Postgres and Playwright. Document updates will flow from LLM usage, and I should propose metrics to track performance and testing effectiveness too.**Creating review prompt**\n\nI need to set up a `review.agent.md` prompt for Copilot to act as a reviewer for merge requests (MR). I'll highlight steps like reading the description and focusing on correctness, edge cases, and adherence to React/TypeScript best practices. I'll emphasize checking tests for behavior, avoiding over-mocking, and ensuring meaningful assertions. It's important to suggest component and e2e tests while ensuring documentation is included and looking for any breaking changes. \n\nI'll keep the output under 100 lines, aiming for around 60-80 lines. Let's finalize the markdown content with a clear structure.\n\n## Best practices to automate code review with LLMs / GenAI (fit for your stack)\n\n### 1) Treat LLMs as *review accelerators*, not gatekeepers\nUse GenAI to (a) summarize, (b) identify risk, (c) detect missing tests, (d) propose targeted test cases, (e) flag common bug patterns in TS/React, and (f) enforce repo conventions. Keep final approval with humans + deterministic CI gates.\n\n**Why:** LLMs are great at breadth and pattern detection, but imperfect at correctness. Pair them with linters, typechecks, tests, and policy checks.\n\n---\n\n### 2) Put deterministic quality gates first (reduce “review load”)\nBefore any LLM review, ensure every MR runs:\n- `tsc --noEmit` (or project references) and strict TS settings\n- ESLint + Prettier + style rules (including React hooks rules)\n- Unit tests + coverage thresholds on *changed lines* (diff coverage), not just global %\n- Build + bundle checks (tree-shaking, dead code, bundle size budgets for UI-heavy repos)\n- Security: dependency audit (SCA), secret scanning\n- Optional: mutation testing on critical modules (small scope) to validate test quality\n\n**Outcome:** Human/LLM reviewers spend time on design/behavior, not syntax/format.\n\n---\n\n### 3) Enforce “MR hygiene” automatically (large MR is the root cause)\nAdd policy checks in GitLab:\n- Soft/hard limits on MR size (files/LOC). If exceeded: require “split plan” or “stacked MRs”.\n- Require a filled MR template: **Intent**, **Scope**, **Risk**, **Test Plan**, **Rollback Plan**, **Screenshots/Video** (UI).\n- CODEOWNERS + mandatory reviewers by area (frontend/backend/platform).\n\n**LLM role:** detect when scope is too broad, suggest split points, and generate a reviewer map.\n\n---\n\n### 4) Automate a *two-pass* AI review in GitLab (fast + deep)\nImplement a GitLab CI job (or bot) that posts a review comment:\n- **Pass 1 (fast, cheap):** Summarize changes, list touched subsystems, identify risk areas, highlight missing tests/docs.\n- **Pass 2 (deep, targeted):** Only on high-risk modules (payments-like flows, editor canvas, rendering pipeline, auth, persistence). Ask the LLM to inspect specific files + call graph, not the whole monorepo.\n\n**Key design:** provide *only* MR diff + a small, retrieved context (RAG):\n- `package.json` scripts, lint/test config\n- relevant module README/ADR\n- public API types, critical interfaces\n- existing similar tests\n\nThis avoids token blowups (900 files) and improves relevance.\n\n---\n\n### 5) Fix the “generated mocks” problem with a test strategy + LLM checklist\nYour instinct is right: excessive mocking can “freeze” low-level design and makes refactoring painful. Move toward:\n- Frontend: **React Testing Library** tests focusing on user behavior, not internals\n- API boundaries: contract tests (schemas, types, MSW)\n- Backend: integration tests with real Postgres via **Testcontainers** (or ephemeral Cloud SQL/Postgres service in CI if feasible)\n- Avoid mocking your own code unless it’s a true boundary (network, time, randomness, storage)\n\n**LLM role:** in review, require tests to justify:\n- What behavior is proven?\n- What are failure modes?\n- Are assertions meaningful or just “renders without crashing”?\n- Is mocking used only at boundaries?\n\n---\n\n### 6) Add e2e smoke tests for critical flows + preview environments\nGiven “nearby feature breaks another feature”, add **Playwright** smoke tests for the highest-value flows:\n- load app, create/edit creative, save/publish/export, reopen, render preview\n- authentication + permissions (if applicable)\n- a few “golden path” templates\n\nRun them:\n- per MR in a **preview environment** on GKE (GitLab Review Apps style)\n- nightly full suite; per-MR smoke subset (fast)\n\nAdd **visual regression** for UI-heavy surfaces (Playwright screenshots) to catch layout regressions.\n\n**LLM role:** when UI changes are detected, demand screenshots/video and propose which smoke tests should be updated/added.\n\n---\n\n### 7) Use GenAI to keep docs and alignment “alive”\nAdd lightweight docs automation:\n- When MR touches a “public” module or introduces a pattern, require an ADR or README update.\n- LLM can draft: ADRs, changelog entry, “how to test” notes, and migration notes.\n- Periodically (weekly), run an LLM job to identify stale docs vs code (heuristic, not authoritative).\n\n---\n\n### 8) Practical architecture (GCP + GitLab) that works\n**Recommended flow**\n1. **Local:** pre-commit hooks (already) + optional “AI self-review” prompt in IDE.\n2. **CI stage 1:** lint/type/unit/diff coverage.\n3. **CI stage 2:** AI Review Bot posts comment to MR (uses MR diff + retrieved context).\n4. **CI stage 3:** spin preview env + run Playwright smoke on it.\n5. **Merge:** enforce approvals + green pipeline.\n6. **Post-merge:** nightly e2e, dependency updates, flaky test detection.\n\n**Privacy/security**\n- Don’t send secrets; strip tokens; redact `.env`-like files.\n- Prefer enterprise offerings with data controls (Copilot for Business, Vertex AI, etc.).\n- Log prompts/responses for auditability (but avoid storing proprietary code beyond policy).\n\n---\n\n### 9) Measure success (so this doesn’t become “AI theater”)\nTrack:\n- MR size distribution\n- review cycle time\n- escaped defects (prod bugs) and severity\n- % MRs with meaningful tests added\n- flaky test rate\n- e2e runtime + failure causes\n\n---\n\n## `review.agent.md` (Copilot prompt, <= 100 lines)\n\n```markdown\n# Review Agent Prompt (TypeScript / UI-heavy Monorepo)\n\nYou are an expert reviewer for our GitLab merge requests for a TypeScript app (frontend-heavy), running on GCP/GKE with Postgres.\nYour goal: reduce runtime bugs and reduce human review effort by finding high-signal issues and test gaps.\n\n## Inputs you should use\n- MR title + description + acceptance criteria (if present)\n- The git diff + changed files list\n- Any linked tickets/ADRs/README\nIf context is missing, ask precise questions rather than guessing.\n\n## Review priorities (highest to lowest)\n1) Correctness & edge cases (state, async flows, caching, retries, error handling)\n2) User-impacting regressions (UI flows, editor behavior, rendering/export, permissions)\n3) API/data integrity (types, validation, migrations, backwards compatibility)\n4) Test quality (behavior-focused, stable, meaningful assertions)\n5) Performance (render loops, large lists, memoization, bundle size, N+1 calls)\n6) Security & safety (injection, unsafe HTML, authz gaps, secrets, logging PII)\n7) Maintainability (clear boundaries, naming, duplication, dead code)\n\n## Testing expectations (enforce in review)\n- Prefer behavior tests over implementation details.\n- Avoid over-mocking our own classes/modules; mock only true boundaries (network/time/storage).\n- If changes are complex: require test-first or at least a clear “test plan”.\n- For UI changes: request screenshots/video and propose Playwright smoke coverage.\n- For data changes: require integration test coverage or a safe migration/rollback plan.\n\n## What to flag as BLOCKER\n- Likely runtime bug, broken flow, unhandled errors, incorrect types, race conditions\n- Missing or weak tests for high-risk behavior\n- Breaking changes without migration/compat story\n- Security/privacy issues (PII logs, unsafe DOM, authz bypass)\n- Large MR without clear split rationale and review guide\n\n## Output format (keep concise and actionable)\n### Summary\n- 3–6 bullets: what changed and what areas are risky\n\n### Blockers (must fix)\n- Bullets with file paths + what to change + why + suggested fix\n\n### Non-blocking issues\n- High/Med/Low bullets; avoid nitpicks (formatting is handled by linters)\n\n### Test gaps & suggested tests\n- List specific scenarios; include at least:\n  - happy path\n  - failure/timeout path\n  - regression case for nearby features\n\n### E2E/Smoke suggestions (Playwright)\n- Name critical flows to automate or update\n\n### Questions for author (if needed)\n- Ask only what’s necessary to confirm correctness\n\nDo not praise. Do not restate the diff. Be specific, reference code locations, and prefer minimal-change fixes.\n```\n\nIf you want, I can also propose a concrete GitLab CI design (jobs + example YAML) for: diff coverage, AI review bot posting MR comments, and Playwright smoke tests running against a GKE preview environment.",
+          "tokenUsage": {
+            "cached": 2783,
+            "total": 2783
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "best-practices prompt (single case)",
+          "vars": {},
+          "assert": [
+            {
+              "type": "contains",
+              "value": "review.agent.md"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "review.agent.md"
+              }
+            }
+          ]
+        },
+        "id": "b16acd03-3a1d-4c26-991e-beb078151a16",
+        "latencyMs": 15,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+          "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+          "config": {}
+        },
+        "promptId": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "promptIdx": 1,
+        "provider": {
+          "id": "openrouter:anthropic/claude-opus-4.6",
+          "label": ""
+        },
+        "response": {
+          "output": "\n\n# Solutions Architecture: Automating the Review Process with LLM & GenAI\n\n## Analysis of Current State\n\nYour situation is a common pattern in fast-moving teams: **AI-accelerated code production has outpaced your quality assurance infrastructure**. Copilot increases output velocity, but your review, testing, and documentation practices haven't scaled to match. Let me break this down systematically.\n\n---\n\n## Root Cause Map\n\n```\nLarge MRs ──────────────────┐\n                             ▼\nCopilot-generated volume ──► REVIEW BOTTLENECK ──► Uncaught bugs in runtime\n                             ▲\nAI-generated mock tests ────┘  (low confidence tests)\n                               (no integration/e2e coverage)\n                               (no documentation guardrails)\n```\n\nThe core issue isn't just \"we need AI to review code\" — it's that **your feedback loop is too late and too shallow**. You catch problems (or don't) at MR time, when the cost of change is highest.\n\n---\n\n## Best Practices: A Layered Automation Strategy\n\n### Layer 1: Shift Left — Prevent Problems Before They Reach the MR\n\n| Practice | Implementation | Tools |\n|----------|---------------|-------|\n| **MR size limits** | GitLab CI check: fail pipeline if diff > 400 lines (configurable). Force decomposition. | Custom CI script |\n| **Copilot instruction files** | `.github/copilot-instructions.md` at repo root to constrain Copilot's output style, patterns, and test approach | GitHub Copilot |\n| **Pre-push architecture lint** | Enforce dependency boundaries (e.g., frontend layers can't import from certain paths) | `dependency-cruiser` or `eslint-plugin-boundaries` |\n| **Test-first gate** | CI check: if new source files are added without corresponding test files, warn or block | Custom CI script |\n\n### Layer 2: AI-Augmented Review in CI Pipeline\n\nThis is where LLM-based automation has the highest ROI.\n\n**Recommended Architecture:**\n\n```\n┌─────────────────────────────────────────────────────┐\n│                   GitLab MR Pipeline                 │\n│                                                      │\n│  Stage 1: Static Analysis (existing lint, types)     │\n│  Stage 2: Test Execution (unit + integration)        │\n│  Stage 3: AI Review Agent ◄── THIS IS NEW            │\n│  Stage 4: E2E Smoke Tests (critical flows)           │\n│  Stage 5: Human Review (now focused & minimal)       │\n└─────────────────────────────────────────────────────┘\n```\n\n**AI Review Agent — How to Build It:**\n\n1. **Trigger**: GitLab CI job on every MR, runs after tests pass.\n2. **Context Assembly**: Collect the diff, related file contents, and your team's `review.agent.md` prompt.\n3. **LLM Call**: Send to Vertex AI (Gemini) on GCP — stays within your cloud boundary, no data leaves GCP.\n4. **Output**: Post structured comments directly on the MR via GitLab API.\n\n```yaml\n# .gitlab-ci.yml (simplified)\nai-review:\n  stage: review\n  image: node:20-alpine\n  script:\n    - node scripts/ai-review.js\n  rules:\n    - if: $CI_PIPELINE_SOURCE == \"merge_request_event\"\n  allow_failure: true  # advisory, not blocking (initially)\n```\n\n**The review script** (`scripts/ai-review.js`):\n- Reads the MR diff via GitLab API\n- For each changed file, loads the full file + neighboring files (for context)\n- Chunks large diffs (stay within token limits)\n- Calls Vertex AI Gemini API with the `review.agent.md` system prompt\n- Parses structured output and posts inline comments on the MR\n\n**Why Vertex AI / Gemini on GCP:**\n- You're already on GCP — IAM, networking, billing all unified\n- Gemini 2.5 Pro has 1M token context — can ingest significant portions of your 900-file repo\n- No data leaves your cloud perimeter (compliance-friendly)\n- Cost: ~",
+          "tokenUsage": {
+            "cached": 1417,
+            "total": 1417
+          },
+          "cached": true,
+          "finishReason": "length"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "best-practices prompt (single case)",
+          "vars": {},
+          "assert": [
+            {
+              "type": "contains",
+              "value": "review.agent.md"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "review.agent.md"
+              }
+            }
+          ]
+        },
+        "id": "c755a143-39e3-478b-8d6c-3550cff5b8de",
+        "latencyMs": 18,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+          "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+          "config": {}
+        },
+        "promptId": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "promptIdx": 3,
+        "provider": {
+          "id": "openrouter:mistralai/mistral-large-2512",
+          "label": ""
+        },
+        "response": {
+          "output": "Here’s a structured `review.agent.md` file that addresses your challenges with LLM/GenAI automation while keeping it concise and actionable:\n\n```markdown\n# Review Agent: Automated Code Review Assistant\n\n## Purpose\nAutomate repetitive review tasks, enforce best practices, and surface high-risk changes in large MRs using LLM/GenAI. Focus on:\n- Reducing manual review burden\n- Catching critical issues early\n- Encouraging test-first culture\n- Improving documentation alignment\n\n---\n\n## Setup Instructions\n1. **Trigger**: Run on MR creation/update (GitLab CI/CD pipeline).\n2. **Inputs**:\n   - MR diff (GitLab API)\n   - Codebase context (file tree, linting rules, test coverage)\n   - Team best practices (stored in `/docs/standards.md`)\n3. **Outputs**:\n   - GitLab MR comment with structured feedback\n   - Suggested fixes (as code snippets or follow-up MRs)\n   - Risk assessment (e.g., \"High: Critical flow affected\")\n\n---\n\n## Prompt Template for LLM\n```text\nYou are a senior TypeScript engineer reviewing a merge request for a UI-focused ad creative builder.\nYour goals:\n1. **Safety**: Flag changes that could break critical flows (e.g., ad rendering, API integrations).\n2. **Quality**: Enforce test-first practices and best practices.\n3. **Clarity**: Highlight areas needing manual review (e.g., complex logic, missing docs).\n\n### Context\n- **Codebase**: Monorepo (900 files), 2/3 frontend (React/TypeScript), GCP/K8s/Postgres.\n- **Current State**:\n  - Unit tests exist but may rely on over-mocking.\n  - E2E tests are missing for critical flows.\n  - Copilot is heavily used; generated code may lack context.\n\n### Instructions\n1. **Analyze the MR Diff**:\n   - List files changed, grouped by:\n     - Critical flows (e.g., `/src/core/rendering`)\n     - Non-critical flows (e.g., `/src/components/analytics`)\n     - Tests (unit/E2E)\n   - Flag:\n     - Changes to shared utilities (e.g., `/src/utils`)\n     - Missing test coverage for new logic\n     - Generated code that violates best practices (e.g., hardcoded values, over-mocking)\n\n2. **Risk Assessment**:\n   - **High Risk**: Changes to critical flows without E2E tests.\n   - **Medium Risk**: New features without unit tests or docs.\n   - **Low Risk**: Stylistic changes, refactors with test coverage.\n\n3. **Suggestions**:\n   - For missing tests:\n     ```markdown\n     🚨 **Missing Test**: This change modifies `src/core/rendering.ts` but lacks:\n     - Unit tests for edge cases (e.g., invalid ad formats).\n     - E2E test for the \"ad preview\" flow (see `/tests/e2e/preview.spec.ts`).\n     ```\n   - For generated code:\n     ```markdown\n     🤖 **Generated Code Warning**: This mock in `src/api/__mocks__/client.ts` hardcodes a response. Consider:\n     - Using a factory pattern (e.g., `createMockClient()`).\n     - Adding integration tests to validate real API behavior.\n     ```\n   - For docs:\n     ```markdown\n     📖 **Documentation Gap**: This new utility in `/src/utils/formatAd.ts` needs:\n     - JSDoc explaining its purpose and edge cases.\n     - A usage example in `/docs/utils.md`.\n     ```\n\n4. **Manual Review Triggers**:\n   - \"This MR introduces a new state management pattern. Please verify alignment with `/docs/state-management.md`.\"\n   - \"The change to `src/core/validation.ts` may affect ad approval flows. Confirm with @backend-team.\"\n\n5. **Output Format**:\n   ```markdown\n   ## Review Summary\n   - **Risk Level**: High\n   - **Critical Flows Affected**: 2 (ad rendering, API sync)\n   - **Tests Added**: 0 (⚠️ Missing E2E for new feature X)\n   - **Best Practices Violations**: 3 (see below)\n\n   ### Detailed Feedback\n   1. **High Risk**\n      - `src/core/rendering.ts`: Line 42 changes the ad template format. Add E2E test in `/tests/e2e/rendering.spec.ts`.\n   2. **Medium Risk**\n      - `src/components/Analytics.tsx`: New component lacks unit tests for error states.\n   3. **Low Risk**\n      - `src/styles/theme.ts`: Color variable rename. No functional impact.\n   ```\n\n---\n\n## Best Practices Enforcement\n1. **Test-First",
+          "tokenUsage": {
+            "cached": 1383,
+            "total": 1383
+          },
+          "cached": true,
+          "finishReason": "length"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "best-practices prompt (single case)",
+          "vars": {},
+          "assert": [
+            {
+              "type": "contains",
+              "value": "review.agent.md"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "contains",
+                "value": "review.agent.md"
+              }
+            }
+          ]
+        },
+        "id": "3f999526-67ed-4f37-99ae-14c6e6d16951",
+        "latencyMs": 2,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Act as a solutions architect. What are the best practices to automate the review process using LLM and GenAI?\n\nSetup: team of 8 engineers, monorepo, standalone application for building digital ad creatives, written in TypeScript, hosted on GCP, Kubernetes, Postgres, and GitLab. The repository contains 900 files. The application is UI-focused, with 2/3 of the code in the frontend.\nThere are some unit test coverage, linting, pre-commit and pre-push hooks.\n\nProblem:\n\n- Sometimes we create large merge requests.\n- We write lots of code using Copilot, and it is getting hard to review such volumes.\n- We generate many unit tests with mocks, but it seems they are not reviewed precisely as they are generated. (I have some doubts that mock approach is the optimal, as it fixates low level classes designs, seems discourage refactoring and do not do integration tests)\n- We need to encourage a culture of test-first when we create MR, as complex code changes are hard to review and predict possible issues.\n- There is a lack of e2e tests to catch critical flows (smokes).\n- When a new feature is implemented in a non-critical flow, it can break a nearby feature.\n- We also feel lack of documentation / alignment on best practices.\n\nDesire:\n\n- Minimize the amount of uncaught mistakes or bugs during runtime.\n- Minimize the amount of manual review or the need to point out areas that require attention.\n\nAfter reasoning provide markdown file review.agent.md:\n\nCraft a good prompt in Markdown for Copilot that will address my team's challenges. Make it short, no longer than 100 lines of instructions.\n",
+          "label": "prompts/research.prompt.md: Act as a solutions architect. What are the best pr...",
+          "config": {}
+        },
+        "promptId": "aa774162909bb3227999390bd9bc181e391b7d6a1058b6b49a5f125abc4db6cd",
+        "promptIdx": 4,
+        "provider": {
+          "id": "openrouter:meta-llama/llama-4-maverick",
+          "label": ""
+        },
+        "response": {
+          "output": "As a solutions architect, I'll outline best practices to automate the review process using LLM and GenAI, addressing the challenges faced by your team.\n\n### Best Practices:\n\n1. **Test-Driven Development (TDD)**: Encourage a culture of writing tests before implementing code changes.\n2. **Smaller Merge Requests**: Break down large MRs into smaller, manageable chunks to facilitate easier review.\n3. **End-to-End (e2e) Tests**: Implement e2e tests to catch critical flows and reduce the likelihood of breaking nearby features.\n4. **Integration Tests**: Consider replacing some unit tests with integration tests to improve test effectiveness and reduce mocking.\n5. **Code Review Guidelines**: Establish clear guidelines for code reviews, including best practices for using Copilot and reviewing generated code.\n6. **Automated Code Review**: Leverage LLM and GenAI to automate code review by analyzing code changes, detecting potential issues, and providing feedback.\n\n### Prompt for Copilot: review.agent.md\n```markdown\n# Review Agent Instructions\n## Goal\nMinimize uncaught mistakes and manual review effort.\n\n## Guidelines\n1. **TDD**: Ensure tests are written before implementing code changes.\n2. **Small MRs**: Break down large MRs into smaller chunks.\n3. **e2e Tests**: Implement e2e tests for critical flows.\n\n## Review Steps\n1. Analyze code changes and detect potential issues.\n2. Review generated unit tests and suggest improvements.\n3. Check for adherence to best practices and coding standards.\n\n## Feedback\n1. Provide constructive feedback on code changes and tests.\n2. Highlight areas requiring attention or improvement.\n\n## Assumptions\n1. TypeScript codebase with existing unit tests and linting.\n2. Familiarity with Copilot and GitLab.\n\n## Output\n1. Review comments with suggestions for improvement.\n2. Code snippets or test examples to illustrate best practices.\n```\nThis prompt is concise, within the 100-line limit, and addresses the team's challenges by emphasizing TDD, smaller MRs, e2e tests, and automated code review. By following these guidelines, Copilot can assist in minimizing uncaught mistakes and manual review effort.",
+          "tokenUsage": {
+            "cached": 785,
+            "total": 785
+          },
+          "cached": true,
+          "finishReason": "stop"
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "best-practices prompt (single case)",
+          "vars": {},
+          "assert": [
+            {
+              "type": "contains",
+              "value": "review.agent.md"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "vars": {},
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 4,
+      "failures": 1,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 7751,
+        "total": 7751,
+        "numRequests": 5,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0
+          }
+        }
+      },
+      "durationMs": 48
+    }
+  },
+  "config": {
+    "tags": {},
+    "description": "LLM PR-review best-practices research (panel run)",
+    "prompts": [
+      "file:///Users/alekseypi/projects/multimodel-research/prompts/research.prompt.md"
+    ],
+    "providers": [
+      {
+        "id": "openrouter:openai/gpt-5.2-pro"
+      },
+      {
+        "id": "openrouter:anthropic/claude-opus-4.6"
+      },
+      {
+        "id": "openrouter:google/gemini-3-pro-preview"
+      },
+      {
+        "id": "openrouter:mistralai/mistral-large-2512"
+      },
+      {
+        "id": "openrouter:meta-llama/llama-4-maverick"
+      }
+    ],
+    "tests": [
+      {
+        "description": "best-practices prompt (single case)",
+        "vars": {},
+        "assert": [
+          {
+            "type": "contains",
+            "value": "review.agent.md"
+          }
+        ]
+      }
+    ],
+    "scenarios": [],
+    "env": {},
+    "outputPath": [
+      "results.json"
+    ],
+    "extensions": [],
+    "metadata": {},
+    "evaluateOptions": {}
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.120.24",
+    "nodeVersion": "v23.6.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2026-02-14T19:48:18.905Z",
+    "evaluationCreatedAt": "2026-02-14T19:48:18.601Z"
+  }
+}
